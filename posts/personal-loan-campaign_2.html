@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-05">
 
-<title>Problem Statement – Ajay Mahajan</title>
+<title>Personal Loan Campaign – Ajay Mahajan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -159,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Problem Statement</h1>
+      <h1 class="title">Personal Loan Campaign</h1>
                       </div>
   </div>
     
@@ -167,6 +168,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 5, 2025</p>
+      </div>
+    </div>
     
       
     </div>
@@ -180,9 +187,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link active" data-scroll-target="#problem-statement">Problem Statement</a>
+  <ul class="collapse">
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
   <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
   <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a></li>
+  </ul></li>
   <li><a href="#please-read-the-instructions-carefully-before-starting-the-project." id="toc-please-read-the-instructions-carefully-before-starting-the-project." class="nav-link" data-scroll-target="#please-read-the-instructions-carefully-before-starting-the-project."><strong>Please read the instructions carefully before starting the project.</strong></a></li>
   <li><a href="#importing-necessary-libraries" id="toc-importing-necessary-libraries" class="nav-link" data-scroll-target="#importing-necessary-libraries">Importing necessary libraries</a></li>
   <li><a href="#loading-the-dataset" id="toc-loading-the-dataset" class="nav-link" data-scroll-target="#loading-the-dataset">Loading the dataset</a></li>
@@ -227,6 +237,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">Problem Statement</h2>
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context</h3>
 <p>AllLife Bank is a US bank that has a growing customer base. The majority of these customers are liability customers (depositors) with varying sizes of deposits. The number of customers who are also borrowers (asset customers) is quite small, and the bank is interested in expanding this base rapidly to bring in more loan business and in the process, earn more through the interest on loans. In particular, the management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors).</p>
@@ -255,6 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>Online</code>: Do customers use internet banking facilities? (0: No, 1: Yes)</li>
 <li><code>CreditCard</code>: Does the customer use a credit card issued by any other Bank (excluding All life Bank)? (0: No, 1: Yes)</li>
 </ul>
+</section>
 </section>
 <section id="please-read-the-instructions-carefully-before-starting-the-project." class="level2">
 <h2 class="anchored" data-anchor-id="please-read-the-instructions-carefully-before-starting-the-project."><strong>Please read the instructions carefully before starting the project.</strong></h2>
@@ -325,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="data-overview">Data Overview</h2>
 <section id="view-the-first-and-last-5-rows-of-the-dataset." class="level3">
 <h3 class="anchored" data-anchor-id="view-the-first-and-last-5-rows-of-the-dataset.">View the first and last 5 rows of the dataset.</h3>
-<div id="cell-17" class="cell">
+<div id="cell-17" class="cell" data-scrolled="true">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>

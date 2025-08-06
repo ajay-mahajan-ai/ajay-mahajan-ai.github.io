@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-05">
 
-<title>easyvisa_f1_score_4 – Ajay Mahajan</title>
+<title>Easy Visa – Ajay Mahajan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,7 +157,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Easy Visa</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 5, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -208,6 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+
 <center>
 <p float="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/4_RGB_McCombs_School_Brand_Branded.png" width="300" height="100"> <img src="https://mma.prnewswire.com/media/1458111/Great_Learning_Logo.jpg?p=facebook" width="200" height="100">
@@ -227,9 +251,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </center>
 <section id="problem-statement" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement">Problem Statement</h2>
-<div id="oMq62cFvNi8j" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="03cbfa4f-25f9-49d2-f0f6-bc93d7a6fd4f">
+<div id="oMq62cFvNi8j" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="03cbfa4f-25f9-49d2-f0f6-bc93d7a6fd4f" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[4], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span> <span style="font-weight:bold;color:rgb(0,0,255)">google</span><span style="font-weight:bold;color:rgb(0,0,255)">.</span><span style="font-weight:bold;color:rgb(0,0,255)">colab</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span> drive
+<span class="ansi-green-fg ansi-bold">      2</span> drive<span style="color:rgb(98,98,98)">.</span>mount(<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">/content/drive</span><span style="color:rgb(175,0,0)">'</span>)
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'google.colab'</pre>
+</div>
+</div>
 </div>
 <section id="context" class="level3">
 <h3 class="anchored" data-anchor-id="context">Context:</h3>
@@ -267,9 +302,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="importing-necessary-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="importing-necessary-libraries">Importing necessary libraries</h2>
-<div id="6IOeGuQTMQXd" class="cell">
+<div id="6IOeGuQTMQXd" class="cell" data-execution_count="71">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installing the libraries with the specified version.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install numpy<span class="op">==</span><span class="fl">1.25.2</span> pandas<span class="op">==</span><span class="fl">1.5.3</span> scikit<span class="op">-</span>learn<span class="op">==</span><span class="fl">1.5.2</span> matplotlib<span class="op">==</span><span class="fl">3.7.1</span> seaborn<span class="op">==</span><span class="fl">0.13.1</span> xgboost<span class="op">==</span><span class="fl">2.0.3</span> <span class="op">-</span>q <span class="op">--</span>user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-yellow-fg">  WARNING: The scripts f2py, f2py3 and f2py3.11 are installed in '/Users/ajaymahajan/.local/bin' which is not on PATH.
+
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span><span class="ansi-yellow-fg">
+
+</span><span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+
+dask-expr 1.1.13 requires pandas&gt;=2, but you have pandas 1.5.3 which is incompatible.</span><span class="ansi-red-fg">
+
+</span>
+
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> A new release of pip is available: <span class="ansi-red-fg">24.3.1</span> -&gt; <span class="ansi-green-fg">25.0.1</span>
+
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> To update, run: <span class="ansi-green-fg">pip install --upgrade pip</span>
+</pre>
+</div>
+</div>
 </div>
 <p><strong>Note</strong>: <em>After running the above cell, kindly restart the notebook kernel and run all cells sequentially from the below.</em></p>
 <div id="canadian-maple" class="cell">
