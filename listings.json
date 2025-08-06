@@ -2,6 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/medical-assitant-RAG_5.html",
+      "/posts/EasyVisa_f1_score_4.html",
+      "/posts/HelmNet_Full_Code_vision_6.html",
+      "/posts/personal-loan-campaign_2.html",
+      "/posts/food-hub_1.html",
+      "/posts/bank-churn-prediction_3.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]
