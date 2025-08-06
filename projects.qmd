@@ -1,0 +1,59 @@
+---
+title: "Projects"
+---
+
+# Projects
+
+Explore my data science and AI projects:
+
+::: {.project-grid}
+
+### 🍔 FoodHub: Restaurant Demand Analysis  
+Analyze restaurant order data to understand demand patterns and improve customer experience.  
+[View Notebook](posts/food-hub_1.ipynb)  
+<span class="tech">Python • Pandas • Matplotlib • EDA</span>
+
+---
+
+### 🏦 Personal Loan Campaign: Predicting Conversions  
+Built a model to predict which liability customers are likely to purchase personal loans.  
+[View Notebook](posts/personal-loan-campaign_2.ipynb)  
+<span class="tech">Logistic Regression • Scikit-learn</span>
+
+---
+
+### 💳 Bank Churn Prediction  
+Neural network classifier predicting customer churn for proactive retention strategies.  
+[View Notebook](posts/bank-churn-prediction_3.ipynb)  
+<span class="tech">Neural Networks • TensorFlow/Keras</span>
+
+---
+
+### 🛂 EasyVisa: Visa Approval Prediction  
+Classification model to streamline U.S. visa application approvals using ML insights.  
+[View Notebook](posts/EasyVisa_f1_score_4.ipynb)  
+<span class="tech">Classification • Feature Engineering</span>
+
+---
+
+### 🏥 Medical Assistant (RAG-based AI)  
+Built an AI solution using Retrieval-Augmented Generation (RAG) to assist healthcare professionals with accurate diagnoses.  
+[View Notebook](posts/medical-assitant-RAG_5.ipynb)  
+<span class="tech">LangChain • Vector DB • AI RAG</span>
+
+---
+
+### 🪖 HelmNet: Safety Helmet Detection  
+Image classification system to ensure workplace safety compliance in hazardous environments.  
+[View Notebook](posts/HelmNet_Full_Code_vision_6.ipynb)  
+<span class="tech">Computer Vision • CNNs • TensorFlow</span>
+
+---
+
+### 🛒 SuperKart: Sales Forecasting  
+Time series forecasting solution to predict supermarket sales and optimize inventory management.  
+[View Notebook](posts/Full_Code_SuperKart_Model_Deployment_Notebook_7.ipynb)  
+<span class="tech">Forecasting • Time Series • ML Deployment</span>
+
+:::
+
