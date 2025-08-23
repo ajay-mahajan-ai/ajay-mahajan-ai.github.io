@@ -712,6 +712,258 @@
         gap: 1rem;
     }
   }
+
+<style>
+/* Resume Section Styles */
+.resume-section {
+    background: #f8fafc;
+    padding: 5rem 0;
+}
+
+.resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.resume-preview {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.resume-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resume-preview h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.resume-preview p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.resume-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 12px;
+    min-width: 120px;
+}
+
+.highlight-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.highlight-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.resume-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume-buttons .btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resume-buttons .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+.resume-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.resume-buttons .btn-outline {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    background: transparent;
+}
+
+.resume-buttons .btn-outline:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Certifications Section Styles */
+.certifications {
+    padding: 5rem 0;
+    background: white;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12);
+}
+
+.cert-card.current {
+    border-top: 4px solid #10b981;
+}
+
+.cert-card.current .cert-badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.cert-badge {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-status {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-content {
+    padding: 2rem;
+}
+
+.cert-content h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.cert-content h4 {
+    font-size: 1.1rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cert-institution {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.cert-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cert-skill {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cert-card.current .cert-skill {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.cert-card.placeholder .cert-skill {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+}
+
+.cert-card.placeholder .cert-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-highlights {
+        gap: 1rem;
+    }
+    
+    .highlight-item {
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+    
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resume-buttons .btn {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+</style>
   </style>
 </head>
 <body>
@@ -731,9 +983,11 @@
         <li>
           <a href="#skills">Skills</a>
         </li>
+        <li><a href="#certifications">Education</a></li>
         <li>
           <a href="#projects">Projects</a>
         </li>
+        <li><a href="#resume">Resume</a></li>
         <li>
           <a href="#contact">Contact</a>
         </li>
@@ -751,6 +1005,7 @@
         <p>15+ years of engineering excellence and passionate about building intelligent systems and solving complex problems through Machine Learning, Deep Learning, and AI technologies.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View My Projects</a> <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          <a href="resume.pdf" class="btn btn-outline">📄 Download Resume</a>
         </div>
       </div>
     </div>
@@ -1181,7 +1436,120 @@
         </div>
       </div>
     </div>
-  </section><!-- Contact Section -->
+  </section>
+<!-- Resume Section -->
+<section id="resume" class="resume-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Resume</h2>
+            <div class="underline"></div>
+            <p>Download my complete professional background and experience</p>
+        </div>
+        <div class="resume-content">
+            <div class="resume-preview">
+                <div class="resume-icon">📄</div>
+                <h3>Professional Resume</h3>
+                <p>Comprehensive overview of 15+ years of engineering experience, current AI/ML transition, and key achievements including architecture of systems deployed in 1M+ devices.</p>
+                <div class="resume-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-number">15+</span>
+                        <span class="highlight-text">Years Experience</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">1M+</span>
+                        <span class="highlight-text">Devices Deployed</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">100+</span>
+                        <span class="highlight-text">Service Providers</span>
+                    </div>
+                </div>
+                <div class="resume-buttons">
+                    <a href="resume.pdf" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="resume.pdf" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-eye"></i> View Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education & Certifications</h2>
+            <div class="underline"></div>
+            <p>Continuous learning journey in AI/ML and engineering excellence</p>
+        </div>
+        <div class="certifications-grid">
+            <!-- Current AI/ML Program -->
+            <div class="cert-card current">
+                <div class="cert-badge">
+                    <div class="cert-icon">🎓</div>
+                    <div class="cert-status">In Progress</div>
+                </div>
+                <div class="cert-content">
+                    <h3>Post Graduate Program</h3>
+                    <h4>AI & Machine Learning</h4>
+                    <p class="cert-institution">The University of Texas at Austin<br>McCombs School of Business</p>
+                    <p class="cert-description">Comprehensive program covering machine learning, deep learning, computer vision, NLP, and MLOps with hands-on projects and real-world applications.</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill">Machine Learning</span>
+                        <span class="cert-skill">Deep Learning</span>
+                        <span class="cert-skill">Computer Vision</span>
+                        <span class="cert-skill">NLP</span>
+                        <span class="cert-skill">MLOps</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Degree -->
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <div class="cert-icon">🎓</div>
+                    <div class="cert-status">Completed</div>
+                </div>
+                <div class="cert-content">
+                    <h3>Bachelor of Engineering</h3>
+                    <h4>Electronics & Communications</h4>
+                    <p class="cert-institution">Karnataka University, India</p>
+                    <p class="cert-description">Strong foundation in electronics, communications, and system design that provides the technical base for my engineering career.</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill">Electronics</span>
+                        <span class="cert-skill">Communications</span>
+                        <span class="cert-skill">System Design</span>
+                        <span class="cert-skill">Engineering Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Certifications Placeholder -->
+            <div class="cert-card placeholder">
+                <div class="cert-badge">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-status">Professional</div>
+                </div>
+                <div class="cert-content">
+                    <h3>Professional Certifications</h3>
+                    <h4>Industry Recognition</h4>
+                    <p class="cert-institution">Various Providers</p>
+                    <p class="cert-description">Ongoing pursuit of industry certifications in cloud platforms, AI/ML frameworks, and software engineering best practices.</p>
+                    <div class="cert-skills">
+                        <span class="cert-skill">Cloud Platforms</span>
+                        <span class="cert-skill">AI/ML Frameworks</span>
+                        <span class="cert-skill">Software Engineering</span>
+                        <span class="cert-skill">Best Practices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <div class="section-title">
