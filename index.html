@@ -592,6 +592,126 @@
                 grid-template-columns: 1fr;
             }
         }
+
+  /* Fixed Career Journey Timeline Styles */
+  .career-journey {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e5e7eb;
+  }
+
+  .career-journey h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .journey-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Add the main timeline line */
+  .journey-timeline::before {
+    content: '';
+    position: absolute;
+    left: 140px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    z-index: 1;
+  }
+
+  .journey-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Remove the individual item lines */
+  .journey-item::before {
+    display: none;
+  }
+
+  .journey-year {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Add circles at timeline connection points */
+  .journey-year::after {
+    content: '';
+    position: absolute;
+    right: -31px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .journey-content h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .journey-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .journey-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .journey-skill {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .journey-timeline::before {
+        display: none;
+    }
+    
+    .journey-year::after {
+        display: none;
+    }
+    
+    .journey-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -646,24 +766,70 @@
           👨‍💻
         </div>
         <div class="about-text">
-          <h3>AI/ML Engineer & Problem Solver</h3>
-          <p>I'm a passionate AI/ML engineer with expertise in developing intelligent systems that solve real-world problems. My journey in artificial intelligence spans across multiple domains including Computer Vision, Natural Language Processing, and Machine Learning.</p>
-          <p>Through comprehensive coursework and hands-on projects, I've developed proficiency in Python, TensorFlow, PyTorch, and various ML frameworks. I enjoy transforming complex data into actionable insights and building scalable AI solutions.</p>
+          <h3>Principal Engineer Transitioning to AI/ML</h3>
+          <p>I'm a seasoned Principal Engineer at Calix with 15+ years of experience in software development, embedded systems, and networking technologies. Currently pursuing AI/ML specialization at UT Austin McCombs to combine my engineering expertise with cutting-edge artificial intelligence.</p>
+          <p>My unique background spans architecting solutions deployed in 1M+ residential gateways, building mesh networking systems for hundreds of broadband providers, and developing Wi-Fi technologies that power smart homes and communities. Now, I'm applying this systems thinking and engineering rigor to machine learning and data science challenges.</p>
+          <p>This transition allows me to bring a rare combination of production-scale engineering experience and modern AI/ML skills to solve complex business problems with both technical depth and practical implementation focus.</p>
           <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">
+                15+
+              </div>
+              <div class="stat-label">
+                Years Engineering
+              </div>
+            </div>
             <div class="stat-item">
               <div class="stat-number">
                 7+
               </div>
               <div class="stat-label">
-                Projects Completed
+                AI/ML Projects
               </div>
             </div>
             <div class="stat-item">
               <div class="stat-number">
-                4+
+                1M+
               </div>
               <div class="stat-label">
-                AI/ML Domains
+                Devices Deployed
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">
+                100+
+              </div>
+              <div class="stat-label">
+                Service Providers
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- New Career Journey Section -->
+      <div class="career-journey">
+        <h3>Engineering to AI/ML Journey</h3>
+        <div class="journey-timeline">
+          <div class="journey-item">
+            <div class="journey-year">
+              2007-2024
+            </div>
+            <div class="journey-content">
+              <h4>Principal Engineer at Calix</h4>
+              <p>Architected mesh networking solutions, Wi-Fi technologies, and embedded systems deployed at massive scale. Led cross-functional teams and drove innovation in residential gateway software.</p>
+              <div class="journey-skills">
+                <span class="journey-skill">C/C++</span> <span class="journey-skill">Embedded Systems</span> <span class="journey-skill">Networking</span> <span class="journey-skill">System Architecture</span>
+              </div>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-year">
+              2024
+            </div>
+            <div class="journey-content">
+              <h4>AI/ML Specialization</h4>
+              <p>Pursuing Post Graduate Program in AI & Machine Learning at UT Austin McCombs. Completed 7 hands-on projects spanning computer vision, NLP, deep learning, and MLOps.</p>
+              <div class="journey-skills">
+                <span class="journey-skill">Python</span> <span class="journey-skill">TensorFlow</span> <span class="journey-skill">Machine Learning</span> <span class="journey-skill">Data Science</span>
               </div>
             </div>
           </div>
