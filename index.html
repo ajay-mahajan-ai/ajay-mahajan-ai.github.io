@@ -234,60 +234,160 @@
             margin-top: 0.5rem;
         }
         
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-        
-        .skill-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-name {
-            font-weight: 600;
-            color: #333;
-        }
-        
-        .skill-percentage {
-            color: #666;
-        }
-        
-        .skill-bar {
-            width: 100%;
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #2563eb, #7c3aed);
-            border-radius: 4px;
-            transition: width 2s ease;
-        }
-        
+/* Enhanced Skills Section Styles */
+.skills-grid-enhanced {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.skill-category-enhanced {
+    background: white;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-category-enhanced:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12);
+}
+
+.category-header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.category-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.category-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.skills-list {
+    padding: 2rem;
+}
+
+.skill-item-enhanced {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(37, 99, 235, 0.02);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-item-enhanced:hover {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.2);
+    transform: translateX(8px);
+}
+
+.skill-item-enhanced:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.skill-percentage {
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+}
+
+.skill-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.skill-bar-enhanced {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress-enhanced {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+    border-radius: 3px;
+    transition: width 2s ease-in-out;
+    position: relative;
+}
+
+.skill-progress-enhanced::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+}
+
+/* Animation on scroll */
+@keyframes skillBarAnimation {
+    from { width: 0%; }
+    to { width: var(--target-width); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid-enhanced {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .category-header {
+        padding: 1.5rem;
+    }
+    
+    .skills-list {
+        padding: 1.5rem;
+    }
+}        
         /* Projects Section */
         .projects {
             background: #f8fafc;
@@ -512,7 +612,7 @@
             </ul>
             <div class="social-links">
                 <a href="https://github.com/ajay-mahajan-ai" title="GitHub">📧</a>
-                <a href="https://linkedin.com/in/ajay-mahajan" title="LinkedIn">💼</a>
+                <a href="https://linkedin.com/in/ajay-mahajan-83422a2/" title="LinkedIn">💼</a>
             </div>
         </div>
     </nav>
@@ -562,128 +662,157 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Skills & Expertise</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">SQL</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">R</span>
-                            <span class="skill-percentage">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
+	<!-- Enhanced Skills Section -->
+	<section id="skills">
+	    <div class="container">
+		<div class="section-title">
+		    <h2>Skills & Expertise</h2>
+		    <div class="underline"></div>
+		    <p>Proficient in modern AI/ML technologies and frameworks</p>
+		</div>
+		<div class="skills-grid-enhanced">
+		    <!-- Programming Skills -->
+		    <div class="skill-category-enhanced">
+			<div class="category-header">
+			    <div class="category-icon">💻</div>
+			    <h3>Programming</h3>
+			</div>
+			<div class="skills-list">
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">🐍 Python</span>
+				    <span class="skill-percentage">95%</span>
+				</div>
+				<div class="skill-description">Data Science, ML, Deep Learning</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 95%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">🗃️ SQL</span>
+				    <span class="skill-percentage">85%</span>
+				</div>
+				<div class="skill-description">PostgreSQL, MySQL, Query Optimization</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 85%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">📊 R</span>
+				    <span class="skill-percentage">75%</span>
+				</div>
+				<div class="skill-description">Statistical Analysis, Data Visualization</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 75%"></div>
+				</div>
+			    </div>
+			</div>
+		    </div>
 
-                <div class="skill-category">
-                    <h3>AI/ML</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Machine Learning</span>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Deep Learning</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Computer Vision</span>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">NLP</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
+		    <!-- AI/ML Skills -->
+		    <div class="skill-category-enhanced">
+			<div class="category-header">
+			    <div class="category-icon">🤖</div>
+			    <h3>AI/ML</h3>
+			</div>
+			<div class="skills-list">
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">⚙️ Machine Learning</span>
+				    <span class="skill-percentage">90%</span>
+				</div>
+				<div class="skill-description">Supervised, Unsupervised, Ensemble Methods</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 90%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">🧠 Deep Learning</span>
+				    <span class="skill-percentage">85%</span>
+				</div>
+				<div class="skill-description">CNNs, RNNs, Transformers</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 85%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">👁️ Computer Vision</span>
+				    <span class="skill-percentage">80%</span>
+				</div>
+				<div class="skill-description">Object Detection, Image Classification</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 80%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">💬 NLP</span>
+				    <span class="skill-percentage">85%</span>
+				</div>
+				<div class="skill-description">Text Processing, Sentiment Analysis, RAG</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 85%"></div>
+				</div>
+			    </div>
+			</div>
+		    </div>
 
-                <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">TensorFlow</span>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">PyTorch</span>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Scikit-learn</span>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Pandas/NumPy</span>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+		    <!-- Frameworks & Tools -->
+		    <div class="skill-category-enhanced">
+			<div class="category-header">
+			    <div class="category-icon">🛠️</div>
+			    <h3>Frameworks & Tools</h3>
+			</div>
+			<div class="skills-list">
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">🔥 TensorFlow</span>
+				    <span class="skill-percentage">85%</span>
+				</div>
+				<div class="skill-description">Model Training, Deployment</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 85%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">⚡ PyTorch</span>
+				    <span class="skill-percentage">80%</span>
+				</div>
+				<div class="skill-description">Deep Learning, Research</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 80%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">🔬 Scikit-learn</span>
+				    <span class="skill-percentage">90%</span>
+				</div>
+				<div class="skill-description">Classical ML, Feature Engineering</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 90%"></div>
+				</div>
+			    </div>
+			    <div class="skill-item-enhanced">
+				<div class="skill-info">
+				    <span class="skill-name">📈 Pandas/NumPy</span>
+				    <span class="skill-percentage">95%</span>
+				</div>
+				<div class="skill-description">Data Manipulation, Analysis</div>
+				<div class="skill-bar-enhanced">
+				    <div class="skill-progress-enhanced" style="width: 95%"></div>
+				</div>
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</section>
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -838,7 +967,10 @@
                             <span class="tag">Object Detection</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ajay-mahajan-ai/AI-ML-portfolio/tree/main/06-helmnet-computer-vision" class="project-link">📁 Code</a>
+			    <a href="https://nbviewer.org/github/ajay-mahajan-ai/AI-ML-portfolio/blob/main/06-helmnet-computer-vision/HelmNet_Full_Code_vision_6.ipynb" 
+			       class="project-link" target="_blank">📊 View on NBViewer</a>
+			    <a href="https://github.com/ajay-mahajan-ai/AI-ML-portfolio/tree/main/"06-helmnet-computer-vision" 
+			       class="project-link" target="_blank">📁 Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -859,7 +991,10 @@
                             <span class="tag">Scalability</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ajay-mahajan-ai/AI-ML-portfolio/tree/main/07-superkart-model-deployment" class="project-link">📁 Code</a>
+			    <a href="https://nbviewer.org/github/ajay-mahajan-ai/AI-ML-portfolio/blob/main/07-superkart-model-deployment/Full_Code_SuperKart_Model_Deployment_Notebook_7.ipynb" 
+			       class="project-link" target="_blank">📊 View on NBViewer</a>
+			    <a href="https://github.com/ajay-mahajan-ai/AI-ML-portfolio/tree/main/"07-superkart-model-deployment" 
+			       class="project-link" target="_blank">📁 Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -879,12 +1014,12 @@
                 <div class="contact-item">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <p>ajay.mahajan.ai@gmail.com</p>
+                    <p>ajay.mahajan@gmail.com</p>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💼</div>
                     <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/ajay-mahajan">/in/ajay-mahajan</a>
+                    <a href="https://linkedin.com/in/ajay-mahajan-83422a2/">/in/ajay-mahajan</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
