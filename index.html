@@ -713,7 +713,6 @@
     }
   }
 
-<style>
 /* Resume Section Styles */
 .resume-section {
     background: #f8fafc;
@@ -963,40 +962,160 @@
         gap: 1.5rem;
     }
 }
-</style>
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem 0;
+}
+
+.mobile-nav.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav a:hover {
+    background: #f8fafc;
+    color: #2563eb;
+    padding-left: 2.5rem;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Updates */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .social-links {
+        display: none;
+    }
+    
+    .nav-container {
+        justify-content: space-between;
+    }
+}
+
+/* Medium screens - show simplified nav */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        display: none;
+    }
+}
   </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
+<nav>
     <div class="nav-container">
-      <div class="logo">
-        Ajay Mahajan
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li><a href="#certifications">Education</a></li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li><a href="#resume">Resume</a></li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-      <div class="social-links">
-        <a href="https://github.com/ajay-mahajan-ai" title="GitHub">📧</a> <a href="https://linkedin.com/in/ajay-mahajan-83422a2/" title="LinkedIn">💼</a>
-      </div>
+        <div class="logo">Ajay Mahajan</div>
+        
+        <!-- Desktop Navigation -->
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#certifications">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/ajay-mahajan-ai" title="GitHub">📧</a>
+            <a href="https://linkedin.com/in/ajay-mahajan" title="LinkedIn">💼</a>
+        </div>
     </div>
-  </nav><!-- Hero Section -->
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#home" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+        <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+        <a href="#resume" onclick="closeMobileMenu()">Resume</a>
+        <a href="#certifications" onclick="closeMobileMenu()">Education</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content">
@@ -1639,6 +1758,33 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
+// Mobile Menu JavaScript
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    mobileNav.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    mobileNav.classList.remove('active');
+    menuBtn.classList.remove('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (!navContainer.contains(event.target) && mobileNav.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
   </script>
 </body>
 </html>
